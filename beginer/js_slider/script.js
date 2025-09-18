@@ -13,23 +13,26 @@ const items = [
     text: "Thank you for making it painless, pleasant and most of all hassle free! I wish I would have thought of it first. The very best.",
     name: "Bishwas M.",
   },
+  {
+    image: "https://d1nu01mlr7y921.cloudfront.net/car-brand/land-rover/Land%20Rover%20make%201-min.jpg",
+    text: "2022 Ferrari 458 Speciale.",
+    name: "dR Test Dealer",
+  },
 ];
 
 let currentItem = 0;
+
 function renderItem(item) {
   img.setAttribute("src", item.image);
   para.textContent = item.text;
   userName.textContent = item.name;
 }
 function changeSlide() {
+  renderItem(items[currentItem]);
   currentItem++;
   if (currentItem > items.length - 1) {
     currentItem = 0;
   }
-  renderItem(items[currentItem]);
+  setTimeout(changeSlide, 3000);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderItem(items[currentItem]);
-  setInterval(changeSlide, 3000);
-});
+changeSlide();
