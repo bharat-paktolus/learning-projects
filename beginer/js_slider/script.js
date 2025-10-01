@@ -14,7 +14,8 @@ const items = [
     name: "Bishwas M.",
   },
   {
-    image: "https://d1nu01mlr7y921.cloudfront.net/car-brand/land-rover/Land%20Rover%20make%201-min.jpg",
+    image:
+      "https://d1nu01mlr7y921.cloudfront.net/car-brand/land-rover/Land%20Rover%20make%201-min.jpg",
     text: "2022 Ferrari 458 Speciale.",
     name: "dR Test Dealer",
   },
